@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  --padding-nav: 0 1rem;
+  --padding-product: 2rem 4rem;
+  --red-color: #EB4A5A;
+  --darkgray-color: #434343;
+  --lightgray-color: #F6F3F3;
+  --light-color: #F9FAFC;
+  --blue-color: #234671;
+}
+
+.borde {
+  border: 1px solid blue
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-nav);
+  background-color: var(--lightgray-color);
+  box-shadow: 1px 1px 10px rgb(26, 26, 26);
+}
+
+.nav img {
+  width: 8rem;
+  height: 3rem;
+}
+
+.nav button {
+  width: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: var(--red-color);
+  padding-top: 3rem;
+}
+
+.header img {
+  width: 150px;
+}
+
+
+main h3 {
+  padding: var(--padding-product);
+  color: var(--darkgray-color);
+  font-weight: 6300;
+}
+
+.products__container {
+  padding: var(--padding-product);
+  /* border: 1px solid var(--red-color); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.product__container {
+  /* border: 3px solid var(--blue-color); */
+  width: 25%;
+  padding: 0.5rem;
+}
+
+.product__container img {
+  width: 100%;
+  /* border: 1px solid yellow; */
+}
+
+.product__container__name {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  font-size: .8rem;
+  height: 1.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+
+.product__container__price {
+  color: var(--darkgray-color);
+  font-weight: 700;
+
+  /* border: 1px solid red; */
+  text-align: center;
+
+}
+
+.product__container__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product__container__button button {
+  border: 1px solid rgba(0, 0, 0, 0.349);
+  padding: 3%;
+  margin-bottom: 5px;
+  color: var(--darkgray-color);
+  background-color: var(--lightgray-color);
+  background-color: white;
+  box-shadow: 0px 0px 0px 0px var(--darkgray-color);
+  border-radius: 5px;
+  width: 80%;
+  margin: .2rem;
+  font-size: .8rem;
+}
+
+.product__container__button button:hover {
+  border: none;
+  box-shadow: 0px 2px 0px 1px var(--darkgray-color);
+  background-color: rgba(194, 192, 192, 0.075);
+}
+
+.cart__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  height: 85%;
+  top: 64px;
+  width: 30%;
+  overflow-y: scroll;
+  transition: 0.5s;
+  box-shadow: 5px 10px 20px 0px rgba(67, 67, 67, 0.461);
+  left: 100%;
+  border-radius: 0px 0px 4px 0px;
+}
+
+.nav__cart__visible {
+  left: 72%;
+}
